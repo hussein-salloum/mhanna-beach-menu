@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mhanna-beach-menu
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#087f8c" />
+  <meta name="description" content="لائحة أسعار استراحة مهنا على شاطئ صور الجنوبي" />
+  <title>استراحة مهنا - قائمة الطعام</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="sun"></div>
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="wave wave-one"></div>
+    <div class="wave wave-two"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="season-pill" id="season"></span>
+      <h1 id="restaurant-name"></h1>
+      <p id="restaurant-subtitle"></p>
+      <div class="hero-badges">
+        <span>🌊 إطلالة بحرية</span>
+        <span>🍽️ قائمة واضحة وسريعة</span>
+        <span id="restaurant-note"></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="أدوات القائمة">
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="ابحث عن صنف…" autocomplete="off" />
+      </label>
+      <div id="category-tabs" class="category-tabs" aria-label="فئات القائمة"></div>
+    </section>
+
+    <section id="menu" class="menu-grid" aria-live="polite"></section>
+    <p id="empty-state" class="empty-state" hidden>لم يتم العثور على صنف مطابق.</p>
+
+    <section class="notice-card">
+      <div class="notice-icon">ℹ️</div>
+      <div>
+        <h2>ملاحظة مهمة</h2>
+        <p id="rules"></p>
+      </div>
+    </section>
+
+    <section class="contact-card">
+      <p class="eyebrow">للحجز والاستفسار</p>
+      <h2>تواصل معنا مباشرة</h2>
+      <div id="phone-buttons" class="phone-buttons"></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong id="footer-name"></strong>
+    <span>شاطئ صور الجنوبي • موسم 2026</span>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
