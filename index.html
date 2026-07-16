@@ -3,79 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#063f52" />
-  <meta name="description" content="قائمة استراحة مهنا على شاطئ صور الجنوبي" />
-  <title>استراحة مهنا - قائمة الطعام</title>
+  <meta name="theme-color" content="#062d3a" />
+  <meta name="description" content="قائمة استراحة مهنا على شاطئ صور" />
+  <title>استراحة مهنا | قائمة الطعام</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="sky-glow"></div>
-    <div class="cloud c1"></div><div class="cloud c2"></div>
-    <div class="island island-left"></div><div class="island island-right"></div>
-    <div class="palm palm-left"><i></i><b></b></div>
-    <div class="palm palm-right"><i></i><b></b></div>
-    <div class="sea sea-back"></div><div class="sea sea-front"></div>
-    <div class="hero-shade"></div>
-
+  <header class="hero" id="top">
     <nav class="topbar">
-      <a class="brand-mark" href="#top" aria-label="العودة إلى الأعلى"><span>36</span></a>
+      <a class="mini-brand" href="#top" aria-label="العودة إلى الأعلى">م</a>
       <div class="top-actions">
-        <a href="#categories">الأقسام</a>
-        <a href="#contact">تواصل معنا</a>
+        <a href="#menu-start">القائمة</a>
+        <a class="call-link" href="#contact">اتصل بنا</a>
       </div>
     </nav>
 
-    <div class="hero-content" id="top">
-      <span class="season-pill" id="season"></span>
-      <p class="kicker">WELCOME TO THE SOUTHERN COAST</p>
+    <div class="hero-content">
+      <p class="eyebrow">TYRE · LEBANON</p>
       <h1 id="restaurant-name"></h1>
       <p class="subtitle" id="restaurant-subtitle"></p>
-      <div class="hero-cta">
-        <a class="primary-button" href="#categories">استكشف القائمة</a>
-        <span id="restaurant-note"></span>
+      <div class="hero-buttons">
+        <a class="primary-button" href="#menu-start">تصفح القائمة</a>
+        <a class="glass-button" href="#contact">للحجز والاستفسار</a>
       </div>
     </div>
 
-    <div class="scroll-cue"><span></span> اسحب للأسفل</div>
+    <div class="hero-bottom">
+      <span id="season"></span>
+      <span id="restaurant-note"></span>
+    </div>
   </header>
 
   <main>
-    <section class="intro-card">
-      <div>
-        <p class="section-kicker">نكهات البحر والجنوب</p>
-        <h2>اختاروا القسم الذي تحبّونه</h2>
-      </div>
-      <p>قائمة سريعة وواضحة، مصممة خصيصاً للهاتف عند فتحها من رمز QR.</p>
-    </section>
-
-    <section id="categories" class="category-section">
-      <div id="category-cards" class="category-cards" aria-label="أقسام القائمة"></div>
-    </section>
-
     <section class="menu-shell" id="menu-start">
-      <div class="menu-toolbar">
+      <div class="menu-top">
         <div>
-          <p class="section-kicker">قائمة الأسعار</p>
+          <p class="section-kicker">MENU</p>
           <h2 id="active-title">جميع الأصناف</h2>
         </div>
         <label class="search-box">
-          <span>⌕</span>
-          <input id="search" type="search" placeholder="ابحث عن صنف…" autocomplete="off" />
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.4-3.4"></path></svg>
+          <input id="search" type="search" placeholder="ابحث عن صنف أو مشروب…" autocomplete="off" />
         </label>
       </div>
+
+      <div class="category-rail-wrap">
+        <div id="category-cards" class="category-rail" aria-label="أقسام القائمة"></div>
+      </div>
+
       <div id="active-filter" class="active-filter" hidden></div>
       <section id="menu" class="menu-grid" aria-live="polite"></section>
       <p id="empty-state" class="empty-state" hidden>لم يتم العثور على صنف مطابق.</p>
-    </section>
-
-    <section class="experience-strip">
-      <div><strong>🌊</strong><span>إطلالة بحرية</span></div>
-      <div><strong>🔥</strong><span>مشاوي طازجة</span></div>
-      <div><strong>☀️</strong><span>أجواء صيفية</span></div>
     </section>
 
     <section class="notice-card">
@@ -85,17 +66,17 @@
 
     <section class="contact-card" id="contact">
       <div>
-        <p class="section-kicker light">للحجز والاستفسار</p>
-        <h2>يوم بحر أجمل يبدأ بمكالمة</h2>
-        <p>اتصلوا بنا مباشرة لحجز طاولة أو للاستفسار عن القائمة.</p>
+        <p class="section-kicker light">RESERVATIONS</p>
+        <h2>احجز طاولتك على البحر</h2>
+        <p>اتصل بنا مباشرة للحجز أو للاستفسار عن الأصناف والأسعار.</p>
       </div>
       <div id="phone-buttons" class="phone-buttons"></div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-logo"><span>36</span><strong id="footer-name"></strong></div>
-    <span>شاطئ صور الجنوبي • موسم 2026</span>
+    <strong id="footer-name"></strong>
+    <span>شاطئ صور · لبنان · 2026</span>
   </footer>
 
   <script src="menu-data.js"></script>
